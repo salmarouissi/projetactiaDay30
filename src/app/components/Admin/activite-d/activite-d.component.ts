@@ -38,9 +38,7 @@ export class ActiviteDComponent implements OnInit {
     this.actionSService.getActiviteid(this.idActivite).subscribe(data=>this.act=data);
   }
 
-  onEdit(){ 
-    this.router.navigate(['/admin/modifA']); 
-  }
+
 
   onAddMembre(){
     this.router.navigate(['/admin/addP']); 

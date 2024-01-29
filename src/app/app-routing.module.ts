@@ -29,7 +29,7 @@ const routes: Routes = [
     {path:'detailsA/:id', title:'Admin Details', component:ActiviteDComponent},
     {path:'showA', title:'Show Activity', component:ShowActivitiesComponent},
     {path:'addA', title:'Add Activity', component:AddActivitiesComponent},
-    {path:'modifA', title:'Modif Activity', component:ModifActivitiesComponent},
+    {path:'modifA/:id', title:'Modif Activity', component:ModifActivitiesComponent},
     {path:'addP', title:'Add Person', component:AddPersonneComponent},
     {path:'modifP', title:'Modif Person', component:ModifPersonneComponent},  
     {path:'changerMDP', title:'Changer MDP', component:ChangerMDPComponent},  

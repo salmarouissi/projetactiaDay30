@@ -149,6 +149,22 @@
           "linkdin": "https://www.facebook.com/profile.php?id=100009773827806"
         }
       ]
+    },
+    {
+      "name": "hhhhh56",
+      "technology": "",
+      "description": "",
+      "image": "assets/images/layout_img/g1.jpg",
+      "equipe": [
+        {
+          "firstName": "",
+          "lastName": "uuuu",
+          "role": "Chef",
+          "image": "assets/images/layout_img/bg1.png",
+          "linkdin": ""
+        }
+      ],
+      "id": "6"
     }
   ],
   "membre": [

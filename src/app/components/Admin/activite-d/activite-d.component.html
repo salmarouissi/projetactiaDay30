@@ -60,7 +60,7 @@
                                             <strong>Technologie:</strong> <br>{{act.technology}}
                                             <br>
                                             <br>
-                                            <button style="margin-left:38%;margin-bottom:5%;background-color: green;" class="btn btn-sm btn-outline-success" (click)="onEdit()">Edit Activity</button>        
+                                            <button [routerLink]="['/admin/modifA',act.id]" style="margin-left:38%;margin-bottom:5%;background-color: green;" class="btn btn-sm btn-outline-success" >Edit Activity</button>        
                                         </div>
  
                                         <!-- Le profile du chef -->

@@ -61,13 +61,13 @@ export class ActionSService implements OnInit {
     return this.http.put<Activite>(updateUrl, act);
   }
   
-  // addAvtivity(a:Activite):Observable<Activite>{
-  //   return this.http.post<Activite>(URL,a);
-  // }
 
   addAvtivity(a: Activite): Observable<Activite> {
     return this.http.post<Activite>(URL, a);
   }
   
-
+  EditActivity(Act:Activite):Observable<Activite>{
+    return this.http.put<Activite>(URL+'/'+Act.id,Act);
+  }
+  
 }

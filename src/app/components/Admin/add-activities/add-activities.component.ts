@@ -20,7 +20,7 @@ export class AddActivitiesComponent implements OnInit{
 
   ngOnInit(): void {
     this.activityForm=this.formBuilder.nonNullable.group({
-      id:[''],
+      id:[],
       name:[''],
       technology:[''],
       description:[''],
