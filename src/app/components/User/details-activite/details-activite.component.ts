@@ -24,6 +24,11 @@ export class DetailsActiviteComponent implements OnInit{
       console.log(this.lesActivites);
 
     })
+
+    this.activatedRoute.paramMap.subscribe(params => {
+      this.idActivite = +params.get('identif')!;
+      this.afficherActivite();
+    });
   }
 
   afficherActivite() {

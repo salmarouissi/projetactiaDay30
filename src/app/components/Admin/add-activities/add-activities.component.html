@@ -56,7 +56,7 @@
                                       <img width="100%" src="assets/images/logo/actia2.jpg" style="width: auto;" alt="">
                                       <div class="card-body">
                                           <h2 class="title ">Ajouter une activite</h2>
-                                          <form class="form box-form " [formGroup]="activityForm" >
+                                          <form class="form box-form "  [formGroup]="activityForm" (ngSubmit)="onSubmitForm()" >
                                               <div class="input-group">
                                                 <span class="input-group-text">Activitie's Name</span>
                                                 <input type="text" class="form-control" formControlName="name" >
@@ -82,41 +82,39 @@
                                               <div formArrayName="equipe">
                                                 <div *ngFor="let s of lesequipes.controls ; index as i" [formGroupName]="i">
 
-                                              
-
                                                   <div class="input-group">
                                                     <span class="input-group-text">Last name</span>
-                                                    <input type="text" class="form-control" formControlName="technology" >
-                                                  </div>
+                                                    <input type="text" class="form-control" formControlName="lastName" >
+                                                  </div><br>
 
                                                   <div class="input-group">
                                                     <span class="input-group-text">First name</span>
-                                                    <input type="text" class="form-control" formControlName="technology" >
-                                                  </div>
+                                                    <input type="text" class="form-control" formControlName="firstName" >
+                                                  </div><br>
 
                                                   <div>
                                                     <label> Roles :</label><br>
                                                     <select class="form-control"  name="lesRoles" formControlName="role">
                                                         <option *ngFor="let c of lesroles" [value]=c>{{c}}</option> 
                                                     </select>
-                                                  </div>
+                                                  </div><br>
 
                                                   <div class="input-group">
                                                     <span class="input-group-text">image</span>
                                                     <input type="text" class="form-control" formControlName="image" >
-                                                  </div>
+                                                  </div><br>
 
                                                   <div class="input-group">
                                                     <span class="input-group-text">Linkdin</span>
                                                     <input type="text" class="form-control" formControlName="linkdin" >
-                                                  </div>                                                            
-                                                </div>
-                                                <input type="button" value="Add sponsor" class="btn btn-outline-primary btn-sm" (click)="onAjouter()">
+                                                  </div>  <br>                                                          
+                                                </div><br>
+                                                <input type="button" value="Add Person" class="btn btn-outline-primary btn-sm" (click)="onAjouter()">
                                             </div>
+                                            <input type="submit" style="float: right; margin-right:38% ;background-color: rgba(149, 192, 23, 0.756);" class="btn btn-sm btn-success" value="ADD Activity">
                                           </form>
                                           <br>
                                           <br>
-                                          <button style="float: right; margin-right:38% ;background-color: rgba(149, 192, 23, 0.756);" class="btn btn-sm btn-success" >ADD Activity</button>
                                         </div>
                                   </div>
                               </div>

@@ -20,11 +20,11 @@ export class AddActivitiesComponent implements OnInit{
 
   ngOnInit(): void {
     this.activityForm=this.formBuilder.nonNullable.group({
-      id:[],
+      id:[''],
       name:[''],
       technology:[''],
       description:[''],
-      image : ['assets/default.jpg'],
+      image : ['assets/images/layout_img/g1.jpg'],
       equipe:this.formBuilder.array([])
     })
     console.log(this.lesActivites);
@@ -45,7 +45,7 @@ export class AddActivitiesComponent implements OnInit{
         firstName: ['' ],
         lastName: ['' ],
         role: [Role.Chef ],
-        image : ['assets/default.jpg'],
+        image : ['assets/images/layout_img/bg1.png'],
         linkdin: ['' ]
 
       }
@@ -55,5 +55,31 @@ export class AddActivitiesComponent implements OnInit{
   onDetails(id:number){
     this.router.navigate(['/admin/detailsA/'+id]); 
   }
+  
+  // onSubmitForm(){
+  //   this.actionSService.addAvtivity(this.activityForm.value as Activite).subscribe(() => {
+  //     alert("ajout de l'activité reussit reussit");
+  //     this.router.navigate(['/admin/mainA']);
+  //   });
+   
+  // }
+
+  onSubmitForm() {
+    console.log('aaaaa');
+    
+    this.actionSService.addAvtivity(this.activityForm.value as Activite).subscribe(
+      data => {
+        console.log("Réponse du service:", data);
+        alert("Ajout de l'activité réussi");
+        this.router.navigate(['/admin/mainA']);
+      },
+      error => {
+        console.error("Erreur lors de l'ajout de l'activité:", error);
+        alert("Erreur lors de l'ajout de l'activité. Veuillez consulter la console pour plus de détails.");
+      }
+    );
+  }
+
+
   
 }

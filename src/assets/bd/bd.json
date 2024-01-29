@@ -2,7 +2,7 @@
   "activite": [
     {
       "id": "1",
-      "name": "ADAS Integration",
+      "name": "ADAS",
       "technology": "Matlab/Simulink, Git, Gilabt CI, shell, Jira",
       "image": "assets/images/activite/adas2.png",
       "description": "Model based Integration",

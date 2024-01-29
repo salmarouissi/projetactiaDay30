@@ -60,5 +60,14 @@ export class ActionSService implements OnInit {
     const updateUrl = `${URL}/${id}`;
     return this.http.put<Activite>(updateUrl, act);
   }
+  
+  // addAvtivity(a:Activite):Observable<Activite>{
+  //   return this.http.post<Activite>(URL,a);
+  // }
+
+  addAvtivity(a: Activite): Observable<Activite> {
+    return this.http.post<Activite>(URL, a);
+  }
+  
 
 }
