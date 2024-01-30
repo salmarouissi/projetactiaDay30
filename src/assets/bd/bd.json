@@ -151,7 +151,7 @@
       ]
     },
     {
-      "name": "hhhhh56",
+      "name": "hhhhh5",
       "technology": "",
       "description": "",
       "image": "assets/images/layout_img/g1.jpg",
@@ -165,6 +165,38 @@
         }
       ],
       "id": "6"
+    },
+    {
+      "id": null,
+      "name": "mm",
+      "technology": "",
+      "description": "",
+      "image": "assets/images/layout_img/g1.jpg",
+      "equipe": [
+        {
+          "firstName": "",
+          "lastName": "pp",
+          "role": "Chef",
+          "image": "assets/images/layout_img/bg1.png",
+          "linkdin": ""
+        }
+      ]
+    },
+    {
+      "id": "",
+      "name": "oo",
+      "technology": "",
+      "description": "",
+      "image": "assets/images/layout_img/g1.jpg",
+      "equipe": [
+        {
+          "firstName": "",
+          "lastName": "ooo",
+          "role": "Chef",
+          "image": "assets/images/layout_img/bg1.png",
+          "linkdin": ""
+        }
+      ]
     }
   ],
   "membre": [
@@ -173,21 +205,24 @@
       "lastName": "bouchaala",
       "role": "technical lead",
       "image": "assets/images/activite/adas2.png",
-      "Linkidin": "https://www.facebook.com/profile.php?id=100009773827806"
+      "Linkidin": "https://www.facebook.com/profile.php?id=100009773827806",
+      "id": "3500"
     },
     {
       "lastName": "Attouani",
       "firstName": "Anis",
       "role": "chef d'equipe",
       "image": "anis@gmail.com",
-      "linkdin": "https://www.facebook.com/profile.php?id=100009773827806"
+      "linkdin": "https://www.facebook.com/profile.php?id=100009773827806",
+      "id": "6a20"
     },
     {
       "lastName": "tesnim",
       "firstName": "Dhouib",
       "role": "developpeur",
       "image": "anis@gmail.com",
-      "linkdin": "https://www.facebook.com/profile.php?id=100009773827806"
+      "linkdin": "https://www.facebook.com/profile.php?id=100009773827806",
+      "id": "7ec8"
     }
   ],
   "login": [

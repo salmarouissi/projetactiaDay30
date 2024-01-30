@@ -29,6 +29,7 @@
                </li>
              </ol>
           </li>
+          <li><a routerLink="/admin/addA"><i class="fa fa-bars purple_color"></i> <span class="intitule">Show Activities</span></a></li>      
           <li><a routerLink="/admin/addA"><i class="fa fa-plus-square red_color"></i> <span class="intitule">Add Activities</span></a></li>          
        </ul>
     </div>
@@ -57,6 +58,11 @@
                                       <div class="card-body">
                                           <h2 class="title ">Ajouter une activite</h2>
                                           <form class="form box-form "  [formGroup]="activityForm" (ngSubmit)="onSubmitForm()" >
+                                              <div class="input-group">
+                                                <span class="input-group-text">Id</span>
+                                                <input type="text" class="form-control" formControlName="id" >
+                                              </div>
+                                              <br>
                                               <div class="input-group">
                                                 <span class="input-group-text">Activitie's Name</span>
                                                 <input type="text" class="form-control" formControlName="name" >
