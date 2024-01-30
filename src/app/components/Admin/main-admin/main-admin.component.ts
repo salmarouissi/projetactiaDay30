@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Activite } from 'src/app/Class/Activite/activite';
+import { Login } from 'src/app/Class/Login/login';
 import { ActionSService } from 'src/app/servive/action-s.service';
 import { AuthSService } from 'src/app/servive/auth-s.service';
 
@@ -11,6 +12,7 @@ import { AuthSService } from 'src/app/servive/auth-s.service';
 })
 export class MainAdminComponent implements OnInit {
   lesActivites:Activite[]=[];
+  login!:Login;
   
   constructor(private router:Router,private authService:AuthSService,private actionSService:ActionSService){}
 
@@ -20,6 +22,15 @@ export class MainAdminComponent implements OnInit {
       this.lesActivites=data;
       console.log(this.lesActivites);
 
+    })
+    this.afficherLoginId()
+  }
+
+  afficherLoginId(){
+    this.actionSService.getLoginId(1).subscribe(data=>{
+      this.login=data;
+      console.log(this.login);
+      
     })
   }
   

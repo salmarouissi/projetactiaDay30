@@ -30,7 +30,7 @@ const routes: Routes = [
     {path:'showA', title:'Show Activity', component:ShowActivitiesComponent},
     {path:'addA', title:'Add Activity', component:AddActivitiesComponent},
     {path:'modifA/:id', title:'Modif Activity', component:ModifActivitiesComponent},
-    {path:'addP', title:'Add Person', component:AddPersonneComponent},
+    {path:'addP/:id', title:'Add Person', component:AddPersonneComponent},
     {path:'modifP', title:'Modif Person', component:ModifPersonneComponent},  
     {path:'changerMDP', title:'Changer MDP', component:ChangerMDPComponent},  
     {path:'changerUsername', title:'Changer Username', component:ChangerUsernameComponent},  

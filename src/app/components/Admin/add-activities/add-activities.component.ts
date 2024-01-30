@@ -13,7 +13,7 @@ import { ActionSService } from 'src/app/servive/action-s.service';
 export class AddActivitiesComponent implements OnInit{
   lesActivites:Activite[]=[];
   activityForm!:FormGroup;
-
+  nextId: number = 1;
 
   constructor(private router:Router,private formBuilder:FormBuilder , private actionSService:ActionSService) { }
   lesroles=Object.values(Role);
@@ -27,7 +27,9 @@ export class AddActivitiesComponent implements OnInit{
       image : ['assets/images/layout_img/g1.jpg'],
       equipe:this.formBuilder.array([])
     })
+
     console.log(this.lesActivites);
+    
     this.actionSService.getActivite().subscribe(data=>{
       this.lesActivites=data;
       console.log(this.lesActivites);
@@ -55,17 +57,13 @@ export class AddActivitiesComponent implements OnInit{
   onDetails(id:number){
     this.router.navigate(['/admin/detailsA/'+id]); 
   }
-  
-  // onSubmitForm(){
-  //   this.actionSService.addAvtivity(this.activityForm.value as Activite).subscribe(() => {
-  //     alert("ajout de l'activité reussit reussit");
-  //     this.router.navigate(['/admin/mainA']);
-  //   });
-   
-  // }
 
   onSubmitForm() {
     console.log('aaaaa');
+    const idNext=this.lesActivites.length+1
+
+    this.activityForm.patchValue({ id: idNext.toString() });
+
     
     this.actionSService.addAvtivity(this.activityForm.value as Activite).subscribe(
       data => {

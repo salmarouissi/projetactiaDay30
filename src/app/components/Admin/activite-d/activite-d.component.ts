@@ -41,7 +41,7 @@ export class ActiviteDComponent implements OnInit {
 
 
   onAddMembre(){
-    this.router.navigate(['/admin/addP']); 
+    this.router.navigate(['/admin/addP/'+this.idActivite]); 
   }
 
   onDetails(id:number){

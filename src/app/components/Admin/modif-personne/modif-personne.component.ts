@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Activite } from 'src/app/Class/Activite/activite';
 import { ActionSService } from 'src/app/servive/action-s.service';
@@ -10,8 +11,10 @@ import { ActionSService } from 'src/app/servive/action-s.service';
 })
 export class ModifPersonneComponent implements OnInit{
   lesActivites:Activite[]=[];
+  
 
-  constructor(private router:Router, private actionSService:ActionSService) { }
+
+  constructor(private router:Router,private formBuilder:FormBuilder , private actionSService:ActionSService) { }
 
   ngOnInit(): void {
     console.log(this.lesActivites);
@@ -25,4 +28,6 @@ export class ModifPersonneComponent implements OnInit{
   onDetails(id:number){
     this.router.navigate(['/admin/detailsA/'+id]); 
   }
+
+
 }

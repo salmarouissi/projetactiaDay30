@@ -29,7 +29,7 @@
                  </li>
              </ol>
           </li>
-          <li><a routerLink="/admin/addA"><i class="fa fa-bars purple_color"></i> <span class="intitule">Show Activities</span></a></li>      
+          <li><a routerLink="/admin/showA"><i class="fa fa-bars purple_color"></i> <span class="intitule">Show Activities</span></a></li>      
           <li><a routerLink="/admin/addA"><i class="fa fa-plus-square red_color"></i> <span class="intitule">Add Activities</span></a></li>          
        </ul>
     </div>
@@ -75,7 +75,7 @@
                                         <td>{{a.technology}}</td>
                                         <td >
                                             <a routerLink="/admin/detailsA" class="icon"><i class="fa fa-info-circle yellow_color"></i></a>
-                                            <a routerLink="/admin/modifA" class="icon"><i class="fa fa-edit blue2_color"></i></a>
+                                            <a [routerLink]="['/admin/modifA',a.id]" class="icon"><i class="fa fa-edit blue2_color"></i></a>
                                             <a (click)="deleteAct(a.id)" class="icon"><i class="fa fa-trash red_color"></i></a>
                                         </td>
                                     </tr>

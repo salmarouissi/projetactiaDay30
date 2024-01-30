@@ -1,13 +1,13 @@
 {
   "activite": [
     {
-      "id": "1",
-      "name": "ADAS",
+      "name": "ADAS1",
       "technology": "Matlab/Simulink, Git, Gilabt CI, shell, Jira",
-      "image": "assets/images/activite/adas2.png",
       "description": "Model based Integration",
+      "image": "assets/images/activite/adas2.png",
       "equipe": [
         {
+          "id": "1",
           "lastName": "Attouani",
           "firstName": "Anis",
           "role": "chef",
@@ -15,6 +15,7 @@
           "linkdin": "https://www.facebook.com/profile.php?id=100009773827806"
         },
         {
+          "id": "2",
           "lastName": "tesnim",
           "firstName": "Dhouib",
           "role": "developpeur",
@@ -22,20 +23,21 @@
           "linkdin": "https://www.facebook.com/profile.php?id=100009773827806"
         },
         {
+          "id": "3",
           "lastName": "Rouissi",
           "firstName": "Syrine",
           "role": "developpeur",
           "image": "assets/images/layout_img/msg3.png",
           "linkdin": "https://www.facebook.com/profile.php?id=100009773827806"
         }
-      ]
+      ],
+      "id": "1"
     },
     {
-      "id": "2",
       "name": "Matrix",
       "technology": "Python, Robot Framwork",
-      "image": "assets/images/activite/matrix.png",
       "description": "Matrix: Microservice Automotive Test Robot Integration eXecuter -> Test Framework development in OO Python Developed Keywords cover most of IVI/IVC services (canakin for can traffic, IVI_Test_Service, Androsmart and appium for HMI testing, TKD for HMI testing based on AI, Metacortex for ATLAS, Wicket for SSH connexion …) Coordination with automated tests teams to ensure uptodate automatic compains inline with framework updates",
+      "image": "assets/images/activite/matrix.png",
       "equipe": [
         {
           "lastName": "Attouani",
@@ -58,7 +60,8 @@
           "image": "assets/images/layout_img/msg4.png",
           "linkdin": "https://www.facebook.com/profile.php?id=100009773827806"
         }
-      ]
+      ],
+      "id": "2"
     },
     {
       "id": "3",
@@ -149,54 +152,6 @@
           "linkdin": "https://www.facebook.com/profile.php?id=100009773827806"
         }
       ]
-    },
-    {
-      "name": "hhhhh5",
-      "technology": "",
-      "description": "",
-      "image": "assets/images/layout_img/g1.jpg",
-      "equipe": [
-        {
-          "firstName": "",
-          "lastName": "uuuu",
-          "role": "Chef",
-          "image": "assets/images/layout_img/bg1.png",
-          "linkdin": ""
-        }
-      ],
-      "id": "6"
-    },
-    {
-      "id": null,
-      "name": "mm",
-      "technology": "",
-      "description": "",
-      "image": "assets/images/layout_img/g1.jpg",
-      "equipe": [
-        {
-          "firstName": "",
-          "lastName": "pp",
-          "role": "Chef",
-          "image": "assets/images/layout_img/bg1.png",
-          "linkdin": ""
-        }
-      ]
-    },
-    {
-      "id": "",
-      "name": "oo",
-      "technology": "",
-      "description": "",
-      "image": "assets/images/layout_img/g1.jpg",
-      "equipe": [
-        {
-          "firstName": "",
-          "lastName": "ooo",
-          "role": "Chef",
-          "image": "assets/images/layout_img/bg1.png",
-          "linkdin": ""
-        }
-      ]
     }
   ],
   "membre": [
@@ -223,6 +178,14 @@
       "image": "anis@gmail.com",
       "linkdin": "https://www.facebook.com/profile.php?id=100009773827806",
       "id": "7ec8"
+    },
+    {
+      "lastName": "Rouissi",
+      "firstName": "Syrine",
+      "role": "developpeur",
+      "image": "assets/images/layout_img/msg2.png",
+      "linkdin": "https://www.facebook.com/profile.php?id=100009773827806",
+      "id": "7e98"
     }
   ],
   "login": [

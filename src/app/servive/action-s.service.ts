@@ -5,7 +5,6 @@ import { Observable } from 'rxjs/internal/Observable';
 import { Login } from '../Class/Login/login';
 import { Membre } from '../Class/Membre/membre';
 
-
 const URL = "http://localhost:3000/activite";
 const URL2 = "http://localhost:3000/membre";
 const URL3="http://localhost:3000/login";
@@ -20,12 +19,16 @@ export class ActionSService implements OnInit {
 
 
   ngOnInit(): void {
-
   }
+
 
   getLogin():Observable<Login[]>{
     return this.http.get<Login[]>(URL3);
-}
+  }
+
+  getLoginId(id:number):Observable<Login>{
+    return this.http.get<Login>(URL3+"/"+id);
+  }
 
   getActivite():Observable<Activite[]>{
     return this.http.get<Activite[]>(URL);
@@ -56,8 +59,8 @@ export class ActionSService implements OnInit {
   }
 
 
-  updateAct(id: number, act: Activite): Observable<Activite> {
-    const updateUrl = `${URL}/${id}`;
+  updateAct(act: Activite): Observable<Activite> {
+    const updateUrl = `${URL}/${act.id}`;
     return this.http.put<Activite>(updateUrl, act);
   }
   
@@ -69,5 +72,6 @@ export class ActionSService implements OnInit {
   EditActivity(Act:Activite):Observable<Activite>{
     return this.http.put<Activite>(URL+'/'+Act.id,Act);
   }
+
   
 }

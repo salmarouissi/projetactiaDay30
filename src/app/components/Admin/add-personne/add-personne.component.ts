@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Activite } from 'src/app/Class/Activite/activite';
 import { Role } from 'src/app/role';
 import { ActionSService } from 'src/app/servive/action-s.service';
@@ -14,17 +14,21 @@ export class AddPersonneComponent implements OnInit{
   lesActivites:Activite[]=[];
   ajoutPersonneForm!:FormGroup
   lesroles=Object.values(Role);
-  lesactivite?:Activite;
+  lesactivite!:Activite;
+  idActivite!:number;
 
-  constructor(private router:Router,private formBuilder:FormBuilder, private actionSService:ActionSService) { }
+  nextId: number = 1;
+
+  constructor(private activatedRoute: ActivatedRoute,private router:Router,private formBuilder:FormBuilder, private actionSService:ActionSService) { }
 
   ngOnInit(): void {
-    this.actionSService.getActivite().subscribe(data=>{
-      this.lesActivites=data;
-      this.lesactivite = this.lesActivites.length > 0 ? this.lesActivites[0] : undefined;
-    })
+    this.idActivite=this.activatedRoute.snapshot.params['id']
+
+    this.afficherAct()
+
     this.ajoutPersonneForm = this.formBuilder.nonNullable.group(
       {
+      id:[''],
       nom:[''],
       prenom:[''],
       role:[''],
@@ -32,6 +36,19 @@ export class AddPersonneComponent implements OnInit{
       linkdin:['']
       }
     )
+
+    this.actionSService.getActivite().subscribe(data=>{
+      this.lesActivites=data;
+      console.log(this.lesActivites);
+
+    })
+  }
+
+  afficherAct(){
+    this.actionSService.getActiviteid(this.idActivite).subscribe((data)=>{
+      this.lesactivite=data;
+    })
+
   }
   
   onDetails(id:number){
@@ -39,7 +56,10 @@ export class AddPersonneComponent implements OnInit{
   }
 
   onAddPForm() {
-    if (this.lesactivite && this.lesactivite.equipe) {
+    const idNext=this.lesActivites.length+1
+
+    this.ajoutPersonneForm.patchValue({ identif: idNext.toString() });
+
       const newPerson = {
         lastName: this.ajoutPersonneForm.get('nom')?.value,
         firstName: this.ajoutPersonneForm.get('prenom')?.value,
@@ -48,14 +68,11 @@ export class AddPersonneComponent implements OnInit{
         linkdin: this.ajoutPersonneForm.get('linkdin')?.value
       };
 
-      this.lesactivite.equipe.push(newPerson);
+      this.lesactivite.equipe?.push(newPerson);
 
-      this.actionSService.updateAct(this.lesactivite.id, this.lesactivite).subscribe(() => {
+      this.actionSService.updateAct(this.lesactivite).subscribe(() => {
         this.router.navigate(['/admin/mainA']);
       });
-    } else {
-    console.error('Lesactivite or its equipe property is undefined.');
-    // Handle the error or provide a default behavior.
-  }
+
   }
 }
