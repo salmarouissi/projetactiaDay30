@@ -1,4 +1,4 @@
-import { Membre } from "../Membre/membre";
+import { Membre as MembreModel } from "../Membre/membre";
 
 export class Activite {
     constructor(
@@ -7,7 +7,7 @@ export class Activite {
         public technology:string,
         public description:string,
         public image:string,
-        public equipe:Membre []
+        public equipe:MembreModel[]
 
     ){}
 }

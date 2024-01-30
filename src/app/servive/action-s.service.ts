@@ -54,6 +54,10 @@ export class ActionSService implements OnInit {
     return this.http.put<Activite>(`${URL}/${id}`, activite);
   }
 
+  updateMembre(id: number, membre: Membre): Observable<Membre> {
+    return this.http.put<Membre>(`${URL}/${id}`, Membre);
+  }
+
   addPersonne(m:Membre):Observable<Membre>{
     return this.http.post<Membre>(URL, m);
   }

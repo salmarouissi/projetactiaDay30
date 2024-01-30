@@ -17,8 +17,6 @@ export class AddPersonneComponent implements OnInit{
   lesactivite!:Activite;
   idActivite!:number;
 
-  nextId: number = 1;
-
   constructor(private activatedRoute: ActivatedRoute,private router:Router,private formBuilder:FormBuilder, private actionSService:ActionSService) { }
 
   ngOnInit(): void {
@@ -56,11 +54,10 @@ export class AddPersonneComponent implements OnInit{
   }
 
   onAddPForm() {
-    const idNext=this.lesActivites.length+1
 
-    this.ajoutPersonneForm.patchValue({ identif: idNext.toString() });
-
+      const idNext=this.lesactivite.equipe.length+1
       const newPerson = {
+        id:idNext.toString(),
         lastName: this.ajoutPersonneForm.get('nom')?.value,
         firstName: this.ajoutPersonneForm.get('prenom')?.value,
         role: this.ajoutPersonneForm.get('role')?.value,
@@ -71,6 +68,7 @@ export class AddPersonneComponent implements OnInit{
       this.lesactivite.equipe?.push(newPerson);
 
       this.actionSService.updateAct(this.lesactivite).subscribe(() => {
+        alert('message')
         this.router.navigate(['/admin/mainA']);
       });
 

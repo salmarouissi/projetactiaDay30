@@ -1,7 +1,7 @@
 {
   "activite": [
     {
-      "name": "ADAS1",
+      "name": "ADAS",
       "technology": "Matlab/Simulink, Git, Gilabt CI, shell, Jira",
       "description": "Model based Integration",
       "image": "assets/images/activite/adas2.png",
@@ -29,6 +29,14 @@
           "role": "developpeur",
           "image": "assets/images/layout_img/msg3.png",
           "linkdin": "https://www.facebook.com/profile.php?id=100009773827806"
+        },
+        {
+          "id": "4",
+          "lastName": "fff",
+          "firstName": "",
+          "role": "",
+          "image": "assets/images/layout_img/bg1.png",
+          "linkdin": ""
         }
       ],
       "id": "1"
@@ -40,6 +48,7 @@
       "image": "assets/images/activite/matrix.png",
       "equipe": [
         {
+          "id": "1",
           "lastName": "Attouani",
           "firstName": "Anis",
           "role": "chef",
@@ -47,6 +56,7 @@
           "linkdin": "https://www.facebook.com/profile.php?id=100009773827806"
         },
         {
+          "id": "2",
           "lastName": "tesnim",
           "firstName": "Dhouib",
           "role": "developpeur",
@@ -54,6 +64,7 @@
           "linkdin": "https://www.facebook.com/profile.php?id=100009773827806"
         },
         {
+          "id": "3",
           "lastName": "Rouissi",
           "firstName": "Syrine",
           "role": "developpeur",
@@ -71,6 +82,7 @@
       "description": "Ensure SW build and tests launch automatically and continuously Setup CI environment templates and tools for different projects Ensure no regressions for all Core CI users",
       "equipe": [
         {
+          "id": "1",
           "lastName": "Attouani",
           "firstName": "Anis",
           "role": "chef",
@@ -78,6 +90,7 @@
           "linkdin": "https://www.facebook.com/profile.php?id=100009773827806"
         },
         {
+          "id": "2",
           "lastName": "tesnim",
           "firstName": "Dhouib",
           "role": "developpeur",
@@ -85,6 +98,7 @@
           "linkdin": "https://www.facebook.com/profile.php?id=100009773827806"
         },
         {
+          "id": "3",
           "lastName": "Rouissi",
           "firstName": "Syrine",
           "role": "developpeur",
@@ -101,6 +115,7 @@
       "description": "More than 18000 Jira users / 20000 licences L1, L2 and L3 support  / JiraProj  for administration scripts developing Create and maintain Jira workflows including projects autorisations, access rights notification (SAM tool configuration) Create and maintain Jira dashboards, Jira database and jira plugins Migration between Jira instancesJira components managing",
       "equipe": [
         {
+          "id": "1",
           "lastName": "Attouani",
           "firstName": "Anis",
           "role": "chef",
@@ -108,6 +123,7 @@
           "linkdin": "https://www.facebook.com/profile.php?id=100009773827806"
         },
         {
+          "id": "2",
           "lastName": "tesnim",
           "firstName": "Dhouib",
           "role": "developpeur",
@@ -115,6 +131,7 @@
           "linkdin": "https://www.facebook.com/profile.php?id=100009773827806"
         },
         {
+          "id": "3",
           "lastName": "Rouissi",
           "firstName": "Syrine",
           "role": "developpeur",
@@ -131,6 +148,7 @@
       "description": "Provide testing Teams : Automatic Test framework development for IVI  Apps Templates for different tests types: smoke tests / monkey tests … Support for Android applications testing teams",
       "equipe": [
         {
+          "id": "1",
           "lastName": "Attouani",
           "firstName": "Anis",
           "role": "chef",
@@ -138,6 +156,7 @@
           "linkdin": "https://www.facebook.com/profile.php?id=100009773827806"
         },
         {
+          "id": "2",
           "lastName": "tesnim",
           "firstName": "Dhouib",
           "role": "developpeur",
@@ -145,6 +164,7 @@
           "linkdin": "https://www.facebook.com/profile.php?id=100009773827806"
         },
         {
+          "id": "3",
           "lastName": "Rouissi",
           "firstName": "Syrine",
           "role": "developpeur",
